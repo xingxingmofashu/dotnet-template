@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/WebHost/XBoot.WebHost/bin/Debug/net6.0/XBoot.WebHost.dll",
+            "program": "${workspaceFolder}/src/XBoot.WebHost/bin/Debug/net6.0/XBoot.WebHost.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/src/WebHost/XBoot.WebHost",
+            "cwd": "${workspaceFolder}/src/XBoot.WebHost",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",

@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F4FD973D-BA9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{2FE68BF9-CC31-496E-8750-DAF19D3EED07}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XBoot.WebHost", "src\WebHost\XBoot.WebHost\XBoot.WebHost.csproj", "{32C7B810-0BF2-4D33-8080-CCC9DAF809CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XBoot.WebHost", "src\XBoot.WebHost\XBoot.WebHost.csproj", "{E14430EF-0DDA-454B-9BEF-2D4286720B62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,17 +15,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{32C7B810-0BF2-4D33-8080-CCC9DAF809CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32C7B810-0BF2-4D33-8080-CCC9DAF809CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32C7B810-0BF2-4D33-8080-CCC9DAF809CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32C7B810-0BF2-4D33-8080-CCC9DAF809CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E14430EF-0DDA-454B-9BEF-2D4286720B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E14430EF-0DDA-454B-9BEF-2D4286720B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E14430EF-0DDA-454B-9BEF-2D4286720B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E14430EF-0DDA-454B-9BEF-2D4286720B62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2FE68BF9-CC31-496E-8750-DAF19D3EED07} = {F4FD973D-BA9D-466B-B00C-27DD5A50C904}
-		{32C7B810-0BF2-4D33-8080-CCC9DAF809CC} = {2FE68BF9-CC31-496E-8750-DAF19D3EED07}
+		{E14430EF-0DDA-454B-9BEF-2D4286720B62} = {2FE68BF9-CC31-496E-8750-DAF19D3EED07}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7906A600-E320-4C56-8232-72EB9148B887}
