@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using XBoot.Playground.IService;
-using XBoot.Playground.Service;
+using XBoot.Playground.API;
+using XBoot.Playground.API.Service;
+using XBoot.Playground.Services;
 
-[assembly: HostingStartup(typeof(XBoot.Playground.HostingStartup))]
-namespace XBoot.Playground
+[assembly: HostingStartup(typeof(HostingStartup))]
+namespace XBoot.Playground.API
 {
 
     public class HostingStartup : IHostingStartup

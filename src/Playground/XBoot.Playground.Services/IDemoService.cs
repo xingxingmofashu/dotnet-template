@@ -1,6 +1,6 @@
 ﻿using XBoot.Composables;
 
-namespace XBoot.Playground.IService
+namespace XBoot.Playground.Services
 {
     public interface IDemoService
     {

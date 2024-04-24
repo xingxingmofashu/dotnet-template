@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using XBoot.Playground.IService;
+using XBoot.Playground.Services;
 
-namespace XBoot.Playground.Controllers
+namespace XBoot.Playground.API.Controllers
 {
     [ApiExplorerSettings(GroupName = "Playground")]
     [ApiController]
     [Route("api/playground/[controller]")]
-    public class DemoController: ControllerBase
+    public class DemoController : ControllerBase
     {
         private readonly IDemoService _demoService;
 

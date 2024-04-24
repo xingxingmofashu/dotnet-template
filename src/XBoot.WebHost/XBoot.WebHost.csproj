@@ -16,7 +16,7 @@
 	
 	<ItemGroup>
 	  <ProjectReference Include="..\Framework\XBoot.Core\XBoot.Core.csproj" />
-	  <ProjectReference Include="..\Playground\XBoot.Playground\XBoot.Playground.csproj" />
+	  <ProjectReference Include="..\Playground\XBoot.Playground\XBoot.Playground.API.csproj" />
 	</ItemGroup>
 	
 </Project>
