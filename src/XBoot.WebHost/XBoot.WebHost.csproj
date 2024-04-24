@@ -14,4 +14,9 @@
 	  <Folder Include="wwwroot\" />
 	</ItemGroup>
 	
+	<ItemGroup>
+	  <ProjectReference Include="..\Framework\XBoot.Core\XBoot.Core.csproj" />
+	  <ProjectReference Include="..\Playground\XBoot.Playground\XBoot.Playground.csproj" />
+	</ItemGroup>
+	
 </Project>

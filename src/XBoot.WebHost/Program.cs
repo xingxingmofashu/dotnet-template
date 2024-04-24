@@ -1,14 +1,19 @@
-using System.Net;
-using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerUI;
+using System.Net;
+using XBoot.Composables;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<XBootOptions>(options =>
+{
+    options.ConnectionString = builder.Configuration.GetConnectionString("MSSQL");
+});
 
 builder.Services.AddControllersWithViews()
     .AddMvcOptions(options =>
     {
-        options.Filters.Add<IExceptionFilter>();
+        //options.Filters.Add<IExceptionFilter>();
     })
      .AddJsonOptions(options =>
      {
@@ -19,9 +24,9 @@ builder.Services.AddHttpContextAccessor();
 
 var groups = new List<(string route, string group, List<string> files)>
 {
-    ("XBootWeb", "XBootWeb-API", new()),
-    ("Common", "Common-API", new()),
+    ("Playground", "Playground-API", new()),
 };
+
 if (builder.Environment.IsEnvironment("Local") || builder.Environment.IsEnvironment("Development"))
 {
     builder.Services.AddEndpointsApiExplorer();
@@ -37,12 +42,12 @@ if (builder.Environment.IsEnvironment("Local") || builder.Environment.IsEnvironm
                 Description = $"be based on {item.Item1} API document description",
                 Contact = new OpenApiContact
                 {
-                    Name = $"XBoot.Web-{item.Item1}",
-                    Email = $"XBoot.Web-{item.Item1}"
+                    Name = $"xingxingmofashu",
+                    Email = $"xingxingmofashu@outlook.com"
                 },
                 License = new OpenApiLicense
                 {
-                    Name = "Permit",
+                    Name = "MIT",
                 }
             });
             foreach (var xmlItem in item.Item3)
@@ -74,6 +79,8 @@ if (builder.Environment.IsEnvironment("Local") || builder.Environment.IsEnvironm
     });
 }
 
+builder.Services.AddSqlSugar();
+
 // HTTPS enables response compression
 builder.Services.AddResponseCompression(options =>
 {
@@ -98,6 +105,11 @@ if (app.Environment.IsEnvironment("Local") || builder.Environment.IsEnvironment(
         c.DocExpansion(DocExpansion.None);
     });
 }
+
+
+
+app.UseAuthentication();
+app.UseFileServer();
 
 
 app.Use(async (context, next) =>
@@ -132,6 +144,8 @@ if (allowOrigions != null && allowOrigions.Length > 0)
     app.UseCors(o => o.WithOrigins(allowOrigions).AllowAnyMethod().AllowAnyHeader().AllowCredentials());
 }
 
+app.MapControllers();
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -139,5 +153,6 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.MapDefaultControllerRoute();
 
 app.Run();
