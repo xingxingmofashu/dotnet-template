@@ -1,13 +1,14 @@
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Net;
-using XBoot.Composables;
+using XBoot.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.Configure<XBootOptions>(options =>
+builder.Services.Configure<XBootConnectionConfig>(options =>
 {
-    options.ConnectionString = builder.Configuration.GetConnectionString("MSSQL");
+    options.ConnectionString = builder.Configuration.GetConnectionString("POSTGRESQL");
+    options.DbType = SqlSugar.DbType.PostgreSQL;
 });
 
 builder.Services.AddControllersWithViews()
@@ -79,8 +80,6 @@ if (builder.Environment.IsEnvironment("Local") || builder.Environment.IsEnvironm
     });
 }
 
-builder.Services.AddSqlSugar();
-
 // HTTPS enables response compression
 builder.Services.AddResponseCompression(options =>
 {
@@ -135,7 +134,7 @@ app.Use(async (context, next) =>
         await context.Response.SendFileAsync(app.Environment.WebRootPath + filename);
     };
     await responseFile("/index.html");
-    
+
 });
 
 var allowOrigions = builder.Configuration.GetSection("AllowOrigins").Value?.Split(',');

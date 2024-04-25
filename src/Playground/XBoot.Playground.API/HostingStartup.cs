@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using XBoot.Playground.API;
-using XBoot.Playground.API.Service;
+using XBoot.Playground.API.Services;
 using XBoot.Playground.Services;
 
 [assembly: HostingStartup(typeof(HostingStartup))]
