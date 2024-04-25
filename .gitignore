@@ -377,4 +377,3 @@ logs
 .env
 .env.*
 !.env.example
-/src/XBoot.WebHost/appsettings.json
