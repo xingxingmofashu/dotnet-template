@@ -1,8 +1,8 @@
 <script setup lang="ts">
- 
+    
 </script>
 <template>
     <div>
-        Sign in
+        <UButton type="primary">按钮</UButton>
     </div>
 </template>

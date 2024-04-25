@@ -9,6 +9,12 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./store/**']
   },
+  ui:{
+    global:true,
+  },
+  colorMode:{
+    preference:'light',
+  },
   vite: {
     build: {
       minify: 'esbuild',
