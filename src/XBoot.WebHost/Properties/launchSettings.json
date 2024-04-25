@@ -1,0 +1,30 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:21407",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "XBoot.WebHost": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Local",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "XBoot.Core;XBoot.Playground.API;"
+      },
+      "applicationUrl": "https://localhost:7242;http://localhost:5242"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "XBoot.Core;XBoot.Playground.API;"
+      },
+      "nativeDebugging": true
+    }
+  }
+}
