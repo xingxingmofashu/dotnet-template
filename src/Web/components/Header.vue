@@ -1,21 +1,25 @@
 <template>
-    <div :class="['backdrop-blur', 'border-b', '-mb-px', 'sticky', 'top-0', 'z-50',
-        $route.path === '/' ? 'border-primary-200/75 dark:border-primary-900/50' : 'border-gray-200 dark:border-gray-800']
-        ">
-        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex items-center justify-between gap-3 h-[--header-height]">
-            <div class="lg:flex-1 flex items-center gap-1.5 ">
-                XBoot
-            </div>
-            <ul class="items-center gap-x-8 hidden lg:flex">
-                <li class="relative">1</li>
-                <li class="relative">2</li>
-            </ul>
-            <div class="flex items-center justify-end lg:flex-1 gap-1.5">
-                <ColorPicker />
-
-                <ColorMode />
-            </div>
-            
-        </div>
-    </div>
+  <UHeader :links="links" :class="{
+    'border-primary-200/75 dark:border-primary-900/50': $route.path === '/',
+    'border-gray-200 dark:border-gray-800': $route.path !== '/'
+  }">
+    <template #left>
+      <NuxtLink to="/" class="flex items-end gap-2 font-bold text-xl text-gray-900 dark:text-white" aria-label="XBoot">
+        XBoot
+      </NuxtLink>
+    </template>
+    <template #right>
+      <ColorPicker />
+      <UColorModeButton />
+      <UButton to="https://github.com/xingxingmofashu/XBoot" target="_blank" icon="i-simple-icons-github" aria-label="GitHub"
+        v-bind="($ui.button.secondary as any)" />
+    </template>
+  </UHeader>
 </template>
+<script setup lang="ts">
+import type { HeaderLink } from '~/types/ui';
+
+defineProps<{
+  links?: HeaderLink[]
+}>();
+</script>
