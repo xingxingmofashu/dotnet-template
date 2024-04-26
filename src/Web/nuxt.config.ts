@@ -1,19 +1,28 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
+  components: {
+    dirs: [{
+      path: '~/components/ui',
+      prefix: 'U',
+      pathPrefix: false
+    }, "~/components"]
+  },
   modules: [
     "@pinia/nuxt",
     "@vueuse/nuxt",
     "@nuxt/ui"
   ],
+  css:['./assets/css/main.css','./assets/css/scrollbars.css'],
   pinia: {
     storesDirs: ['./store/**']
   },
-  ui:{
-    global:true,
+  ui: {
+    global: true,
+    icons: ['heroicons', 'simple-icons'],
   },
-  colorMode:{
-    preference:'light',
+  colorMode: {
+    preference: 'light',
   },
   vite: {
     build: {
