@@ -8,11 +8,10 @@ export default defineNuxtConfig({
       pathPrefix: false
     }, "~/components"]
   },
-  modules: [
-    "@pinia/nuxt",
-    "@vueuse/nuxt",
-    "@nuxt/ui"
-  ],
+  modules: ["@pinia/nuxt", "@vueuse/nuxt", "@nuxt/ui", "@nuxtjs/tailwindcss"],
+  tailwindcss:{
+    configPath: './tailwind.config.ts',
+  },
   css:['./assets/css/main.css','./assets/css/scrollbars.css'],
   pinia: {
     storesDirs: ['./store/**']
