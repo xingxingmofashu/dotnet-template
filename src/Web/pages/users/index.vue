@@ -1,5 +1,5 @@
 <template>
     <div>
-        Index
+        User Index
     </div>
 </template>
