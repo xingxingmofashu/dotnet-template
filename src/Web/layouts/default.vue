@@ -1,29 +1,7 @@
 <script setup lang="ts">
-const links = [{
-  id: 'home',
-  label: 'Home',
-  icon: 'i-heroicons-home',
-  to: '/',
-  tooltip: {
-    text: 'Home',
-    shortcuts: ['G', 'H']
-  }
-}, {
-  id: 'users',
-  label: 'Users',
-  icon: 'i-heroicons-user-group',
-  to: '/users',
-  tooltip: {
-    text: 'Users',
-    shortcuts: ['G', 'U']
-  }
-}]
+const userStore = useUserStore()
 
-const groups = [{
-  key: 'links',
-  label: 'Go to',
-  commands: links.map(link => ({ ...link, shortcuts: link.tooltip?.shortcuts }))
-}]
+const { links, groups } = storeToRefs(userStore)
 </script>
 
 <template>
@@ -31,10 +9,12 @@ const groups = [{
     <UDashboardPanel :width="250" :resizable="{ min: 200, max: 300 }" collapsible>
       <UDashboardNavbar class="!border-transparent" :ui="{ left: 'flex-1' }">
         <template #left>
-          <UButton color="gray" variant="ghost" :class="['bg-gray-50 dark:bg-gray-800']" class="w-full">
-            <UAvatar src="https://avatars.githubusercontent.com/u/23360933?s=200&v=4" size="2xs" />
-            <span class="truncate text-gray-900 dark:text-white font-semibold">Nuxt</span>
-          </UButton>
+          <div class="w-full">
+            <UButton color="gray" to="/" variant="ghost" class="w-full">
+              <UAvatar src="https://avatars.githubusercontent.com/u/23360933?s=200&v=4" size="2xs" />
+              <span class="truncate text-gray-900 dark:text-white font-semibold">Nuxt</span>
+            </UButton>
+          </div>
         </template>
       </UDashboardNavbar>
       <UDashboardSidebar>

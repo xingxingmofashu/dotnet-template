@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   components: {
     dirs: [{
       path: '~/components/ui',
@@ -31,11 +31,10 @@ export default defineNuxtConfig({
   },
   css: ['./assets/css/main.css', './assets/css/scrollbars.css'],
   pinia: {
-    storesDirs: ['./store/**']
+    storesDirs: ['./stores/**']
   },
   ui: {
     global: true,
-    icons: ['heroicons', 'simple-icons'],
   },
   colorMode: {
     preference: 'light',

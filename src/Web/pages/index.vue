@@ -1,5 +1,5 @@
 <template>
  <div>
-  Index
+  Home Index
  </div>
 </template>
