@@ -6,9 +6,26 @@ export default defineNuxtConfig({
       path: '~/components/ui',
       prefix: 'U',
       pathPrefix: false
-    }, "~/components"]
+    }, '~/components']
   },
-  modules: ["@pinia/nuxt", "@vueuse/nuxt", "@nuxt/ui", "@nuxtjs/tailwindcss", '@nuxt/eslint'],
+  imports: {
+    dirs: ['composables', 'composables/ui/**'],
+  },
+  plugins: [
+    '~/plugins/ui/presets.ts',
+    '~/plugins/ui/variables.ts',
+    {
+      mode: 'client',
+      src: '~/plugins/ui/scrollbars.client.ts',
+    }
+  ],
+  modules: [
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
+    '@nuxt/ui',
+    '@nuxtjs/tailwindcss',
+    '@nuxt/eslint'
+  ],
   tailwindcss: {
     configPath: './tailwind.config.ts',
   },
