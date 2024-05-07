@@ -7,7 +7,7 @@
         <slot name="left">
           <NuxtLink :to="to" :aria-label="ariaLabel" :class="ui.logo">
             <slot name="logo">
-              {{ title || 'XBoot' }}
+              {{ title }}
             </slot>
           </NuxtLink>
         </slot>

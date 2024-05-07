@@ -8,11 +8,11 @@ export default defineNuxtConfig({
       pathPrefix: false
     }, "~/components"]
   },
-  modules: ["@pinia/nuxt", "@vueuse/nuxt", "@nuxt/ui", "@nuxtjs/tailwindcss"],
-  tailwindcss:{
+  modules: ["@pinia/nuxt", "@vueuse/nuxt", "@nuxt/ui", "@nuxtjs/tailwindcss", '@nuxt/eslint'],
+  tailwindcss: {
     configPath: './tailwind.config.ts',
   },
-  css:['./assets/css/main.css','./assets/css/scrollbars.css'],
+  css: ['./assets/css/main.css', './assets/css/scrollbars.css'],
   pinia: {
     storesDirs: ['./store/**']
   },
@@ -27,6 +27,14 @@ export default defineNuxtConfig({
     build: {
       minify: 'esbuild',
       cssMinify: 'esbuild'
+    }
+  },
+  eslint: {
+    config: {
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs'
+      }
     }
   }
 })
