@@ -13,17 +13,31 @@ export const useUserStore = defineStore('user', () => {
                 shortcuts: ['G', 'H']
             }
         }, {
-            id: 'settings',
-            label: 'Settings',
-            to: '/settings',
+            id: 'PersonnelManagement',
+            label: 'Personnel Management',
+            to: '/PersonnelManagement',
             icon: 'i-heroicons-cog-8-tooth',
             children: [{
-                label: 'General',
-                to: '/settings',
+                label: 'Users',
+                to: '/PersonnelManagement/users',
                 exact: true
             }],
             tooltip: {
-                text: 'Settings',
+                text: 'Personnel Management',
+                shortcuts: ['G', 'S']
+            }
+        },{
+            id: 'SystemSettings',
+            label: 'System Settings',
+            to: '/SystemSettings',
+            icon: 'i-heroicons-cog-8-tooth',
+            children: [{
+                label: 'General',
+                to: '/SystemSettings',
+                exact: true
+            }],
+            tooltip: {
+                text: 'System Settings',
                 shortcuts: ['G', 'S']
             }
         }])
