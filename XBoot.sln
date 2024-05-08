@@ -9,27 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{2FE68BF9-CC3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XBoot.WebHost", "src\XBoot.WebHost\XBoot.WebHost.csproj", "{E14430EF-0DDA-454B-9BEF-2D4286720B62}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "src\Web\", "{049F29D9-93CD-414A-8FC9-4F41FD07E303}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_51659"
-		Debug.AspNetCompiler.PhysicalPath = "src\Web\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51659\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_51659"
-		Release.AspNetCompiler.PhysicalPath = "src\Web\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51659\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "51659"
-		SlnRelativePath = "src\Web\"
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{931D5AD2-3483-460C-973A-200490252C7B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Playground", "Playground", "{D21B7330-8B33-4C8D-B43F-D9F9D5AEDBE7}"
@@ -52,10 +31,6 @@ Global
 		{E14430EF-0DDA-454B-9BEF-2D4286720B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E14430EF-0DDA-454B-9BEF-2D4286720B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E14430EF-0DDA-454B-9BEF-2D4286720B62}.Release|Any CPU.Build.0 = Release|Any CPU
-		{049F29D9-93CD-414A-8FC9-4F41FD07E303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{049F29D9-93CD-414A-8FC9-4F41FD07E303}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{049F29D9-93CD-414A-8FC9-4F41FD07E303}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{049F29D9-93CD-414A-8FC9-4F41FD07E303}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{57AACCC1-C109-4A4A-B500-C9B93FF35FCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{57AACCC1-C109-4A4A-B500-C9B93FF35FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57AACCC1-C109-4A4A-B500-C9B93FF35FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -79,7 +54,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2FE68BF9-CC31-496E-8750-DAF19D3EED07} = {F4FD973D-BA9D-466B-B00C-27DD5A50C904}
 		{E14430EF-0DDA-454B-9BEF-2D4286720B62} = {2FE68BF9-CC31-496E-8750-DAF19D3EED07}
-		{049F29D9-93CD-414A-8FC9-4F41FD07E303} = {2FE68BF9-CC31-496E-8750-DAF19D3EED07}
 		{931D5AD2-3483-460C-973A-200490252C7B} = {F4FD973D-BA9D-466B-B00C-27DD5A50C904}
 		{D21B7330-8B33-4C8D-B43F-D9F9D5AEDBE7} = {F4FD973D-BA9D-466B-B00C-27DD5A50C904}
 		{57AACCC1-C109-4A4A-B500-C9B93FF35FCD} = {931D5AD2-3483-460C-973A-200490252C7B}
