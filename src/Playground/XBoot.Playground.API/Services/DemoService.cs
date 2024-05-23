@@ -14,9 +14,15 @@ public class DemoService : IDemoService
         _userService = userService;
     }
 
-    public async Task<XBootResponse> Get()
+    public async Task<XBootPageResponse<Users>> GetUsersAsync(int pageIndex, int pageCount)
     {
-        return XBootResponse.Success(await _userService.GetAsync(x => x.Account == "administrator"));
+        var response= await _userService.QueryPageAsync<Users>(x => !x.IsDeleted, pageIndex, pageCount);
+        return new XBootPageResponse<Users>(){
+            Data=response.T,
+            PageIndex=response.pageIndex,
+            PageSize=response.pageSize,
+            TotalCount=response.totalCount
+        };
     }
 }
 

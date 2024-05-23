@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Framework\XBoot.Composables\XBoot.Composables.csproj" />
+    <ProjectReference Include="..\..\Framework\XBoot.Core\XBoot.Core.csproj" />
   </ItemGroup>
 
 </Project>

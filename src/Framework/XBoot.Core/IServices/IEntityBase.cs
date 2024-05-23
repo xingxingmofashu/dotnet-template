@@ -29,5 +29,5 @@ public interface IEntityBase
     /// <summary>
     /// 删除标识
     /// </summary>
-    bool? IsDeleted { get; set; }
+    bool IsDeleted { get; set; }
 }
