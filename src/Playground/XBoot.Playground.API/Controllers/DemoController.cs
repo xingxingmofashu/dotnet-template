@@ -15,9 +15,9 @@ namespace XBoot.Playground.API.Controllers
             _demoService = demoService;
         }
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetUsersAsync(int pageIndex = 1, int pageCount = 10)
         {
-            return Ok(await _demoService.Get());
+            return Ok(await _demoService.GetUsersAsync(pageIndex, pageCount));
         }
     }
 }

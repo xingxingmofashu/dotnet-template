@@ -39,5 +39,5 @@ public class EntityBase : IEntityBase
     /// Desc:逻辑删除标识
     /// </summary>
     [SugarColumn(ColumnName = "is_deleted")]
-    public bool? IsDeleted { get; set; }
+    public bool IsDeleted { get; set; }
 }
